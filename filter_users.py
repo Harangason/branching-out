@@ -18,8 +18,6 @@ def user_input()-> list:
 def filter_by_mail(user_name) -> list:
     return filter_mail.filter_by_mail(USERS["users"], user_name)
 
-
-
 def main():
 
     print(filter_by_mail(user_input()))
