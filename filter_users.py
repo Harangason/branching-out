@@ -1,9 +1,4 @@
-import json
-import pathlib
-import sys
 import re
-from os import name
-
 import filter_by_mail as filter_mail
 
 
