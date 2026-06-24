@@ -1,10 +1,9 @@
 import re
 import filter_by_mail as filter_mail
 
-USERS = load_users()
+USERS = load_users()   # <--- FEHLTE!
 
-def user_input()-> list:
-    '''split the user's email into the first and last name and return the list of the names include surename and firstname'''
+def user_input() -> list:
     user_name = []
     user_mail = input("Enter the user's email: ").strip().lower()
 
@@ -27,11 +26,13 @@ def user_input()-> list:
 def filter_by_mail(user_name) -> list:
     return filter_mail.filter_by_mail(USERS["users"], user_name)
 
+
 def main():
+    names = user_input()
+    if names is None:
+        return
+    print(filter_by_mail(names))
 
-    print(filter_by_mail(user_input()))
-
-    return
 
 if __name__ == "__main__":
     main()
