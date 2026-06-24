@@ -2,7 +2,6 @@ import re
 
 from load_users import load_users
 import filter_by_mail as filter_mail
-from load_users import load_users
 
 USERS = load_users()
 
