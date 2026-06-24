@@ -6,7 +6,10 @@ def user_input()-> list:
     '''split the user's email into the first and last name and return the list of the names include surename and firstname'''
     user_name = []
     user_mail = input("Enter the user's email: ").strip().lower()
-    local, domain = user_mail.split("@")
+    if "@" not in user_mail:
+        print("Invalid email address: missing "@" symbol")
+        return None
+    local, domain = user_mail.split("@", 1)
     parse_mail = re.split(r"[a-zA-Z0-9]+", local)
     print(f"{parse_mail[0]}@{parse_mail[1]}")
     special_characters = re.findall(r"[a-zA-Z0-9]+", local)
