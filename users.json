@@ -1,5 +1,7 @@
-<<<<<<< HEAD
-"martin-j.drexler@web.de'
-=======
-"martin-j.drexler@web.de"
->>>>>>> origin/main
+{
+  "users": [
+    {"email": "martin@drexler.com"},
+    {"email": "martin-j.drexler@web.de"},
+    {"email": "j.doe@example.com"}
+  ]
+}

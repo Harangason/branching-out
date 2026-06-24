@@ -20,7 +20,7 @@ def user_input() -> list:
     parts = re.split(r"[.,_-]", local)
     parts = [p for p in parts if p]
     # Debug-Ausgabe
-    print(f"{parts}")
+    #print(f"{parts}")
 
     return parts
 
