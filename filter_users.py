@@ -1,9 +1,10 @@
 import re
-from operator import ifloordiv
 
 from load_users import load_users
 import filter_by_mail as filter_mail
+from load_users import load_users
 
+USERS = load_users()
 
 def user_input() -> list:
     user_name = []
