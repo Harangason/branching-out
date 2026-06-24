@@ -2,6 +2,23 @@ import re
 import filter_by_mail as filter_mail
 
 
+BASE_DIR = pathlib.Path(__file__).resolve().parent
+USERS_FILE = BASE_DIR / "users.json"
+USERS = json.load(USERS_FILE.open())
+
+def load_users():
+    if USERS_FILE.exists():
+        USERS = json.load(USERS_FILE.open())
+    else:
+        print("Users file not found")
+        sys.exit(1)
+    return USERS
+
+def save_users(users):
+    json.dump(users, USERS_FILE.open("w"))
+    users = load_users()
+    return users
+
 def user_input()-> list:
     '''split the user's email into the first and last name and return the list of the names include surename and firstname'''
     user_name = []
@@ -17,6 +34,8 @@ def user_input()-> list:
 
 def filter_by_mail(user_name) -> list:
     return filter_mail.filter_by_mail(USERS["users"], user_name)
+
+
 
 def main():
 
