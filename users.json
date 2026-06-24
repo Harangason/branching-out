@@ -1,7 +1,5 @@
 {
   "users": [
-    {"email": "martin@drexler.com"},
-    {"email": "martin-j.drexler@web.de"},
     {"email": "j.doe@example.com"}
   ]
 }
