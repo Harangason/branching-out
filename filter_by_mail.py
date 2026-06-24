@@ -20,5 +20,14 @@ def save_users(users):
 
 EMAIL_REGEX = re.compile(r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$')
 
-def filter_by_mail(emails):
-    return [email for email in emails if EMAIL_REGEX.match(email)]
+def filter_by_mail(users, name_parts):
+    results = []
+
+    for user in users:
+        email = user["email"].lower()
+
+        # Prüfe, ob ALLE Teile im Email-Local-Part vorkommen
+        if all(part in email for part in name_parts):
+            results.append(user)
+
+    return results

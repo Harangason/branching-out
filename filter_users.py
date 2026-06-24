@@ -4,7 +4,6 @@ from operator import ifloordiv
 from load_users import load_users
 import filter_by_mail as filter_mail
 
-USERS = load_users()   # <--- FEHLTE!
 
 def user_input() -> list:
     user_name = []
