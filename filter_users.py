@@ -1,6 +1,7 @@
 import re
 import filter_by_mail as filter_mail
 
+USERS = load_users()
 
 def user_input()-> list:
     '''split the user's email into the first and last name and return the list of the names include surename and firstname'''
