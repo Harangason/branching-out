@@ -88,8 +88,11 @@ def main():
     filtered_users = filter_users(USERS["users"])
     if filtered_users is None:
         return
+    name = filtered_users[0].get("name")
+    age = filtered_users[0].get("age")
+    email = filtered_users[0].get("email")
 
-    print(filtered_users)
+    print(f"Name: {name}, Age: {age}, EMAIL: {email}")
 
 
 if __name__ == "__main__":
